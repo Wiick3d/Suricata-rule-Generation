@@ -1,0 +1,23 @@
+[2024-05-13 05:02:06] ---- honeytrap stopped ----
+
+honeytrap v1.1.0 Copyright (C) 2005-2015 Tillmann Werner <tillmann.werner@gmx.de>
+[2024-05-13 05:02:25] Initializing plugins.
+[2024-05-13 05:02:25] ---- Trapping attacks via NFQ. ----
+[2024-05-13 05:02:26] 103.43.200.99:59412 requesting tcp connection on 10.202.0.2:8000.
+[2024-05-13 05:02:26] 101.201.81.79:50379 requesting tcp connection on 10.202.0.2:3389.
+[2024-05-13 05:02:27] 162.216.149.206:64718 requesting tcp connection on 10.202.0.2:45446.
+[2024-05-13 05:02:27]    45446/tcp  Handling tcp connection request from 162.216.149.206:64718 to 10.202.0.2:45446.
+[2024-05-13 05:02:27]    45446/tcp* 243 bytes read.
+[2024-05-13 05:02:28]    45446/tcp  No data for 1 second(s), sending '\n'.
+[2024-05-13 05:02:28]    45446/tcp  Error - Sending response failed: No such file or directory.
+[2024-05-13 05:02:28]  * 45446/tcp  243 bytes attack string from 162.216.149.206:64718.
+[2024-05-13 05:02:28] 162.216.149.206:64732 requesting tcp connection on 10.202.0.2:45446.
+[2024-05-13 05:02:28]    45446/tcp  Handling tcp connection request from 162.216.149.206:64732 to 10.202.0.2:45446.
+[2024-05-13 05:02:28]    45446/tcp* 207 bytes read.
+[2024-05-13 05:02:29]    45446/tcp  No data for 1 second(s), sending '\n'.
+[2024-05-13 05:02:29]    45446/tcp  Error - Sending response failed: No such file or directory.
+[2024-05-13 05:02:29]  * 45446/tcp  207 bytes attack string from 162.216.149.206:64732.
+[2024-05-13 05:02:30] 103.43.200.99:59414 requesting tcp connection on 10.202.0.2:8000.
+[2024-05-13 05:02:33] 162.216.149.89:56310 requesting tcp connection on 10.202.0.2:30003.
+[2024-05-13 05:02:37] 162.216.149.112:50675 requesting tcp connection on 10.202.0.2:40470.
+[2024-05-13 05:02:37] 103.43.200.99:59431 requesting tcp connection on 10.202.0.2:8000.

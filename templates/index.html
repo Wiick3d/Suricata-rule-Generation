@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suricata Rule Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Suricata Rule Generator</h1>
+    <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <label for="cowrie_logs">Cowrie Log File:</label>
+        <input type="file" id="cowrie_logs" name="cowrie_logs">
+        <label for="honeytrap_logs">HoneyTrap Log File:</label>
+        <input type="file" id="honeytrap_logs" name="honeytrap_logs">
+        <label for="initial_sid">Initial SID:</label>
+        <input type="number" id="initial_sid" name="initial_sid" value="2300000" required>
+        <input type="submit" value="Generate Rules">
+    </form>
+
+    {% if suricata_rules %}
+    <h2>Generated Suricata Rules:</h2>
+    <pre>{% for rule in suricata_rules %}{{ rule }}
+{% endfor %}</pre>
+    {% endif %}
+
+    {% if cowrie_error %}
+    <p class="error">{{ cowrie_error }}</p>
+    {% endif %}
+
+    {% if honeytrap_error %}
+    <p class="error">{{ honeytrap_error }}</p>
+    {% endif %}
+
+    <script>
+        function validateForm() {
+            const cowrieFile = document.getElementById('cowrie_logs').files.length;
+            const honeytrapFile = document.getElementById('honeytrap_logs').files.length;
+
+            if (cowrieFile === 0 && honeytrapFile === 0) {
+                alert('Please select at least one log file.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
